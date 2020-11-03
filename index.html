@@ -8,113 +8,137 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<!-- <link rel="stylesheet" href="assets/css/main.css" /> -->
 	<link rel="stylesheet" href="test.css">
+	<script>
+		$(document).ready(function () {
+			var i = 0;
+			var x = "안녕하세요!<br> 개발자 홍건호의<br> 포트폴리오입니다!<br>";
+			var y = "";
+
+			function typeWriter() {
+				if (i < x.length) {
+					$("#typing").html(y += x[i]);
+					i++;
+
+					setTimeout(typeWriter, 100);
+				}
+			}
+			typeWriter();
+		});
+	</script>
 </head>
 
 <body>
 
 	<div data-role="page" id="intro">
-		<div data-role="header" data-position="fixed">
-			<a href="#contact" data-icon="back"></a>
+		<!--	<div data-role="header" data-position="fixed" id="pageheader">
+			<p><a href="#" data-icon="back">이전페이지</a></p>
+		</div>-->
+		<div data-role="content">
+			<p id="typing"></p>
+
 		</div>
-		<div data-role="content" class="introtext">
-			<h1>안녕하세요<br>개발자 홍건호의<br>포트폴리오입니다.</h1>
-		</div>
-		<div data-role="footer" data-position="fixed">
-			<a href="#aboutme">다음페이지</a>
+		<div data-role="footer" data-position="fixed" id="pagefooter">
+			<p><a href="#aboutme">다음페이지</a></p>
 		</div>
 
 	</div>
 
 	<!-- About Me -->
 	<div data-role="page" id="aboutme" class="three">
-		<div data-role="header" data-position="fixed">
-			<a href="#intro">이전페이지</a>
+		<div data-role="header" data-position="fixed" id="pageheader1">
+			<p><a href="#intro" data-icon="back">이전페이지</a></p>
 		</div>
-		<div data-role="content" class="introtext">
-			<h1>About me</h1>
-			<section>배우는 개발자
-				<br>안녕하십니까 저는<br>안녕하십니까 저는<br>안녕하십니까 저는
-				<br>안녕하십니까 저는<br>안녕하십니까 저는<br>안녕하십니까 저는
-			</section>
+		<div data-role="content" id="aboutmecontent">
+			<h1 id="aboutmetitle">About Me</h1>
+			<p id="aboutmetitleafter"></p>
+			<h1 id="aboutmesubtitle">배우는 개발자</h1>
+			<p id="aboutmetext">&nbsp;저는 어릴 때부터 컴퓨터와 친하게 지내며 개발자를 꿈꾸게 됐습니다.
+				그랬기에 컴퓨터공학과에 진학하였고 어렵지만 재밌는 공부들을 할 수 있었습니다.
+				그 중 웹 개발에 흥미를 느껴 웹 어플리케이션 개발자가 되기 위해 노력중입니다.
+				<br><br>
+				&nbsp;제 개발자로서의 목표는 배우는 개발자입니다.
+				아직 많이 부족하지만 지금까지 그래왔듯이 앞으로도 새로운 기술들을 익히는 개발자로 살고 싶습니다.
+			</p>
 		</div>
-		<div data-role="footer" data-position="fixed">
-			<a href="#skill">다음페이지</a>
+		<div data-role="footer" data-position="fixed" id="pagefooter1">
+			<p><a href="#skill">다음페이지</a></p>
 		</div>
 	</div>
 
 	<div data-role="page" id="skill" class="two">
-		<div data-role="header" data-position="fixed">
-			<a href="#aboutme">이전페이지</a>
+		<div data-role="header" data-position="fixed" id="pageheader1">
+			<p><a href="#aboutme" data-icon="back">이전페이지</a></p>
 		</div>
-		<div data-role="content" class="introtext">
-			<h1>Skill</h1>
-			<h2>Language</h2>
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<h2>Web Skill</h2>
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<h2>Framework</h2>
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
+		<div data-role="content" id="skillcontent">
+			<h1 id="skilltitle">Skill</h1>
+			<p id="skilltitleafter"></p>
+			<h2>Basic</h2>
+			<img src="images/c.png" alt="" style="width:50px; height:50px;">
+			<img src="images/cplusplus.png" alt="" style="width:50px; height:50px;">
+			<img src="images/javascript.png" alt="" style="width:50px; height:50px;">
+			<img src="images/JQuery.png" alt="" style="width:50px; height:50px;">
+			<img src="images/bootstrap.png" alt="" style="width:50px; height:50px;">
+			<img src="images/linux.png" alt="" style="width:50px; height:50px;">
+			<img src="images/android.png" alt="" style="width:50px; height:50px;">
+			<h2>Intermediate</h2>
+			<img src="images/python.png" alt="" style="width:50px; height:50px;">
+			<img src="images/java.png" alt="" style="width:50px; height:50px;">
+			<img src="images/html-5.png" alt="" style="width:50px; height:50px;">
+			<img src="images/css3.png" alt="" style="width:50px; height:50px;">
+			<img src="images/mysql.png" alt="" style="width:50px; height:50px;">
 			<h2>ETC</h2>
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-			<img src="images/man1.png" alt="" style="width:50px; height:50px;">
-
+			<img src="images/git.png" alt="" style="width:50px; height:50px;">
+			<img src="images/github-170-1175028.png" alt="" style="width:50px; height:50px;">
+			<img src="images/django.png" alt="" style="width:50px; height:50px;">
+			<img src="images/windows.png" alt="" style="width:50px; height:50px;">
 		</div>
-		<div data-role="footer" data-position="fixed"
-			<a href="#project">다음페이지</a>
+		<div data-role="footer" data-position="fixed" id="pagefooter1">
+			<p><a href="#project">다음페이지</a></p>
 		</div>
-
 	</div>
 
 	<div data-role="page" id="project" class="two">
-		<div data-role="header">
-			<a href="#skill">이전페이지</a>
+		<div data-role="header" data-position="fixed" id="pageheader1">
+			<p><a href="#skill" data-icon="back">이전페이지</a></p>
 		</div>
-		<div data-role="content" class="introtext">
-			<h1>Project</h1>
-			<div>
-				<a href="#"><img src="images/man1.png" alt="" style="width:100px; height:100px; float:left"></a>
-				<span style="font-size: 40px; font-weight: bold;">프로젝트1</span><br>
-				<p>~에 대한 프로젝트입니다.</p>
+		<div data-role="content" class="introtext" id="projectcontent">
+			<h1 id="projecttitle">Project</h1>
+			<p id="projecttitleafter"></p><br><br>
+			<div class="projects">
+				<img src="images/project1.PNG" alt="" style="width:200px;height:200px;"><br>
+				<span style="font-size: 30px; font-weight: bold;">가천대학교 졸업프로젝트 또바기</span><br>
+				<p>개발기간 : 200907 - 201030<br>
+					협업필터링 기반 개인맞춤여행지추천웹사이트<br>
+					#여행지추천 #html #css #python<br> #django #pandas #aws
+					<a href="http://ec2-13-125-230-42.ap-northeast-2.compute.amazonaws.com/"
+						style="text-decoration: none;">#또바기링크</a>
+					<a href="http://ec2-13-125-230-42.ap-northeast-2.compute.amazonaws.com/"
+						style="text-decoration: none;">#깃허브링크</a>
+				</p>
 			</div>
 			<br>
-			<div>
-				<a href="#"><img src="images/man1.png" alt="" style="width:100px; height:100px; float:left"></a>
-				<span style="font-size: 40px; font-weight: bold;">프로젝트1</span><br>
-				<p>~에 대한 프로젝트입니다.</p>
+			<div class="projects">
+				<img src="images/project2.PNG" alt="" style="width:200px;height:200px;"><br>
+				<span style="font-size: 30px; font-weight: bold;">모바일웹 포트폴리오</span><br>
+				<p>개발기간 : 200926 - 201113<br>
+					모바일웹 개인 포트폴리오 페이지<br>
+					#포트폴리오 #html #css #js #jquery
+					<a href="http://ec2-13-125-230-42.ap-northeast-2.compute.amazonaws.com/"
+						style="text-decoration: none;">#깃허브링크</a>
+				</p>
 			</div>
-			<br>
-			<div>
-				<a href="#"><img src="images/man1.png" alt="" style="width:100px; height:100px; float:left"></a>
-				<span style="font-size: 40px; font-weight: bold;">프로젝트1</span><br>
-				<span>~에 대한 프로젝트입니다.</span>
-			</div>
-
 		</div>
-		<div data-role="footer">
-			<a href="#contact">다음페이지</a>
+		<div data-role="footer" data-position="fixed" id="pagefooter1">
+			<p><a href="#contact">다음페이지</a></p>
 		</div>
 	</div>
 
 	<div data-role="page" id="contact" class="four">
-		<div data-role="header">
-			<a href="#project">이전페이지</a>
+		<div data-role="header" data-position="fixed" id="pageheader">
+			<p><a href="#project" data-icon="back">이전페이지</a></p>
 		</div>
 		<div data-role="content" class="">
 			<div style="text-align: center;">
@@ -130,8 +154,8 @@
 				<p>https://github.com/geonho0116</p>
 			</div>
 		</div>
-		<div data-role="footer">
-			<a href="#">다음페이지</a>
+		<div data-role="footer" data-position="fixed" id="pagefooter">
+			<p><a href="#contact">다음페이지</a></p>
 		</div>
 	</div>
 

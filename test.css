@@ -1,23 +1,113 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:700);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:100);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+TC:500);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:400);
+@import url(https://fonts.googleapis.com/css?family=Gothic+A1:200);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:100);
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:100);
+#project,#aboutme,#skill{
+    background-color: white;
+}
 #intro {
     background-image: url(images/introbg.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    color: black;
+    color: rgb(0,0,0);
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
-#introtext{
-    font-size: 4px;
-    color: black;
+#pageheader, #pagefooter{
+    background-color: rgba(0,0,0,0);
+    border-color: rgba(0,0,0,0);
+}
+#pageheader1, #pagefooter1{
+    background-color: rgba(0,0,0,1);
+    border-color: rgba(0,0,0,0);
+}
+#pageheader p,#pagefooter p, 
+#pageheader1 p, #pagefooter1 p{
+    text-align: center;
+    text-decoration: none;
+}
+#pageheader p a,#pagefooter p a, 
+#pageheader1 p a, #pagefooter1 p a{
+    text-decoration: none;
+    color:white;
+}
+#pageheader1 p a, #pagefooter1 p a{
+    text-decoration: none;
+    color:white;
+}
+#typing{
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top:35%;
+    font-size: 5vw;
+    line-height: 2;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+#aboutme {
+    color: rgb(0,0,0);
+    width: 100%;
+}
+#aboutmecontent, #skillcontent, #projectcontent{
+    font-family: 'Noto Sans KR', sans-serif;
+    text-align: center;
 }
 
-.aboutme_title {
-    margin-right: 12vw;
-    width: 25vw;
-    box-sizing: border-box;
-    text-align: center;
-    align-self: center;
+#aboutmecontent #aboutmetitle,
+#skillcontent #skilltitle,
+#projectcontent #projecttitle{
+    position: relative;
+    display: inline-block;
+    height:30px;
+    font-size: 2.4em;
+    font-weight:400;
+}
+
+#aboutmecontent #aboutmetitleafter{
+    position: absolute;
+    content: "";
+    height:2px;
+    width: 100px;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    background:rgb(255, 0, 0);
+}
+#skillcontent #skilltitleafter{
+    position: absolute;
+    content: "";
+    height:2px;
+    width: 100px;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    background:rgb(107, 140, 231);
+}
+
+#projectcontent #projecttitleafter{
+    position: absolute;
+    content: "";
+    height:2px;
+    width: 100px;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    background:rgb(30, 255, 0);
+}
+
+.projects{
+    border: 3px black solid;
+    width: 100%;
+    height: 100%;
+    padding-top:5px;
+}
+
+.projects p,span{
+    width: 100%;
+    height: 100%;
 }
