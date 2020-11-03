@@ -1,0 +1,23 @@
+#intro {
+    background-image: url(images/introbg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#introtext{
+    font-size: 4px;
+    color: black;
+}
+
+.aboutme_title {
+    margin-right: 12vw;
+    width: 25vw;
+    box-sizing: border-box;
+    text-align: center;
+    align-self: center;
+}
